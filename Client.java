@@ -5,8 +5,11 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args) {
+
+        int server_port = new Scanner(System.in).nextInt();
+
         try {
-            Socket s = new Socket("127.0.0.1",65000);
+            Socket s = new Socket("127.0.0.1",server_port);
 
             OutputStream os = s.getOutputStream();
 

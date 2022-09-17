@@ -8,9 +8,11 @@ public class Server {
         try {
             System.out.println("server start....");
             while (true){
-                ServerSocket serverSocket = new ServerSocket(65000);
+                ServerSocket serverSocket = new ServerSocket(0);
+                System.out.println("port:"+serverSocket.getLocalPort());
                 //
                 Socket s = serverSocket.accept();
+
 
                 BufferedReader br = new BufferedReader(new InputStreamReader(s.getInputStream()));
                 System.out.println("----------");
